@@ -33,7 +33,8 @@ const Checkout = () => {
       "https://ufa-be.up.railway.app/payment/create-intent",
       {
         amount: 200,
-        teamId: "66ca07bc486d8f9227bef61a",
+        type: "join",
+        teamId: "66ce049d1c0ad89b79fd8b4c",
         userId: "66c63572033ce3eafc6abd4c",
       }
     );
@@ -57,7 +58,6 @@ const Checkout = () => {
         clientSecret: res?.data.data.clientSecret,
         confirmParams: {
           return_url: "https://www.npmjs.com/package/@stripe/react-stripe-js",
-          // payment_method: "card",
           payment_method_data: {
             billing_details: {
               name: "Umer",
